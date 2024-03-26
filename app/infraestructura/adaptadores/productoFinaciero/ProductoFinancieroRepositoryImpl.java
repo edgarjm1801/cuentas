@@ -39,4 +39,11 @@ public class ProductoFinancieroRepositoryImpl implements ProductoFinancieroRepos
                 new ProductoFinanciero(UUID.randomUUID(), TipoProductoFinanciero.CUENTA_AHORRO,"numeroCuenta", EstadoProductoFinanciero.ACTIVO, 1000.0, true, new Date(), new Date())
         ));//TODO por implemetar
     }
+
+    @Override
+    public CompletableFuture<ProductoFinanciero> actualizarSaldo(double saldo, UUID id, Date fechaModificacion) {
+        return CompletableFuture.completedFuture(
+                new ProductoFinanciero(id, TipoProductoFinanciero.CUENTA_AHORRO,"numeroCuenta", EstadoProductoFinanciero.ACTIVO, saldo, true, new Date(), fechaModificacion)
+        );//TODO por implemetar
+    }
 }

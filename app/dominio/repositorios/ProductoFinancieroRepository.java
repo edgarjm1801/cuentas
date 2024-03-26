@@ -4,6 +4,7 @@ import dominio.modelos.Cliente;
 import dominio.modelos.EstadoProductoFinanciero;
 import dominio.modelos.ProductoFinanciero;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -20,4 +21,6 @@ public interface ProductoFinancieroRepository {
     CompletableFuture<ProductoFinanciero> actualizarEstado(ProductoFinanciero productoFinanciero, EstadoProductoFinanciero estadoProducto);
 
     CompletableFuture<List<ProductoFinanciero>> listarPorIdCliente(UUID idCliente);
+
+    CompletableFuture<ProductoFinanciero> actualizarSaldo(double saldo, UUID id, Date fechaModificacion);
 }
