@@ -4,13 +4,13 @@ public class TransaccionDTO {
 
     private String tipo;
     private double monto;
-    private Long idCuentaOrigen;
-    private Long idCuentaDestino;
+    private String idCuentaOrigen;
+    private String idCuentaDestino;
 
     public TransaccionDTO() {
     }
 
-    public TransaccionDTO(String tipo, double monto, Long idCuentaOrigen, Long idCuentaDestino) {
+    public TransaccionDTO(String tipo, double monto, String idCuentaOrigen, String idCuentaDestino) {
         this.tipo = tipo;
         this.monto = monto;
         this.idCuentaOrigen = idCuentaOrigen;
@@ -25,11 +25,11 @@ public class TransaccionDTO {
         return monto;
     }
 
-    public Long getIdCuentaOrigen() {
+    public String getIdCuentaOrigen() {
         return idCuentaOrigen;
     }
 
-    public Long getIdCuentaDestino() {
+    public String getIdCuentaDestino() {
         return idCuentaDestino;
     }
 }

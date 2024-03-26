@@ -90,4 +90,18 @@ public class ProductoFinanciero {
         return fechaModificacion;
     }
 
+    public void restarSaldo(double cantidad) {
+        saldo -= cantidad;
+        actualizarFechaModificacion();
+    }
+
+    public void sumarSaldo(double cantidad) {
+        saldo += cantidad;
+        actualizarFechaModificacion();
+    }
+
+    private void actualizarFechaModificacion() {
+        fechaModificacion = new Date();
+    }
+
 }

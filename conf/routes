@@ -16,6 +16,9 @@ PUT     /clientes/:id/productos-financieros/:idProducto/estado  infraestructura.
 GET     /clientes/:id/productos-financieros                     infraestructura.controladores.ProductoFinancieroController.listar(id:String)
 GET     /clientes/:id/productos-financieros/:idProducto         infraestructura.controladores.ProductoFinancieroController.consultar(id:String, idProducto:String)
 
+# transacciones
+POST    /clientes/:id/productos-financieros/:idProducto/transacciones  infraestructura.controladores.TransaccionController.crear(id: String, idProducto: String, request:Request)
+GET     /clientes/:id/productos-financieros/:idProducto/transacciones  infraestructura.controladores.TransaccionController.listar(id: String, idProducto: String)
 
 
 

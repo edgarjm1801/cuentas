@@ -14,7 +14,6 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.CompletionStage;
 
 @Service
 public class ProductoFinancieroService {
@@ -79,4 +78,7 @@ public class ProductoFinancieroService {
     }
 
 
+    public CompletableFuture<ProductoFinanciero> actualizarSaldo(ProductoFinanciero cuentaOrigen) {
+        return productoFinancieroRepository.actualizarSaldo(cuentaOrigen.getSaldo(), cuentaOrigen.getId(), cuentaOrigen.getFechaModificacion());
+    }
 }
